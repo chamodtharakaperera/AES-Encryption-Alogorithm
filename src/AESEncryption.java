@@ -14,15 +14,16 @@ import javax.crypto.spec.SecretKeySpec;
 public class AESEncryption {
     public static void main(String[] args) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException,
             IllegalBlockSizeException, BadPaddingException, IOException {
-        var key = "jackrutorial.com";
+        var key = "nibmnibmnibmnibm";
 
-        System.out.println("File input: " + "D:\\text.txt");
+        System.out.println("AES Encryption Program Started Successfully!!!\n\n");
+        System.out.println("File input: " + "The Input path configured is now processing...");
 
         //encryptedFile
-        encryptedFile(key, "C:\\Users\\charm\\Desktop\\AES\\text.mp3", "C:\\Users\\charm\\Desktop\\AES\\text.enc");
+        encryptedFile(key, "C:\\Users\\charm\\Desktop\\AES\\text.zip", "C:\\Users\\charm\\Desktop\\AES\\encryptedtext.enc");
 
         //decryptedFile
-        decryptedFile(key, "C:\\Users\\charm\\Desktop\\AES\\text.enc", "C:\\Users\\charm\\Desktop\\AES\\text-decrypt.mp3");
+        decryptedFile(key, "C:\\Users\\charm\\Desktop\\AES\\encryptedtext.enc", "C:\\Users\\charm\\Desktop\\AES\\text-decrypt.zip");
     }
 
     public static void encryptedFile(String secretKey, String fileInputPath, String fileOutPath)
@@ -48,6 +49,7 @@ public class AESEncryption {
 
         System.out.println("File successfully encrypted!");
         System.out.println("New File: " + fileOutPath);
+        System.out.println("Please wait still processing...");
     }
 
     public static void decryptedFile(String secretKey, String fileInputPath, String fileOutPath)
@@ -73,5 +75,6 @@ public class AESEncryption {
 
         System.out.println("File successfully decrypted!");
         System.out.println("New File: " + fileOutPath);
+        System.out.println("\n\nCongrats! AES File Encryption and Decrytion Completed Successfully!");
     }
 }
